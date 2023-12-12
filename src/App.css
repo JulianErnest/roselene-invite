@@ -1,0 +1,27 @@
+body {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Bayon';
+  src: url('./fonts/Bayon-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alike';
+  src: url('./fonts/Alike-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-bayon {
+  font-family: 'Bayon', sans-serif;
+  font-weight: bold;
+}
+
+.font-alike {
+  font-family: 'Alike', sans-serif;
+  font-weight: bold;
+}
