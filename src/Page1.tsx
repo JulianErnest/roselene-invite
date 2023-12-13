@@ -5,7 +5,9 @@ import { useState } from "react";
 const Page1 = ({ handleNext }: PageProps) => {
   const [code, setCode] = useState("");
     function handleOnClick() {
-        handleNext();
+      if (code === import.meta.env.VITE_SECRET_CODE) {
+        handleNext()
+      }
     }
   return (
     <div className="flex items-center justify-center h-screen w-screen bg-cover bg-center bg-[url('assets/bg1.gif')]">
@@ -19,6 +21,8 @@ const Page1 = ({ handleNext }: PageProps) => {
         className="flex flex-col items-center justify-center w-3/5 h-3/5 bg-p-75 rounded-md"
       >
         <h1 className="font-bayon text-secondary text-[3.5rem]">SECRET CODE</h1>
+        <h1 className="font-alike text-secondary text-xl">CLUE: Item you bought the first time you asked me to go with you</h1>
+
         <motion.input
           value={code}
           onChange={(e) => setCode(e.target.value)}
