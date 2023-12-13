@@ -7,6 +7,9 @@ const Page1 = ({ handleNext }: PageProps) => {
     function handleOnClick() {
       if (code === import.meta.env.VITE_SECRET_CODE) {
         handleNext()
+      } else {
+        console.log(code)
+        alert("Wrong code")
       }
     }
   return (
